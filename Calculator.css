@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 90%;
+  max-width: 400px;
+}
+
+#inputbox {
+  width: 100%;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 2.5rem;
+  color: white;
+  text-align: right;
+  outline: none;
+}
+
+.btn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+button[value="="] {
+  background: rgba(255, 165, 0, 0.3);
+}
+
+button[value="AC"],
+button[value="DEL"],
+button[value="%"] {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+button[value="/"],
+button[value="*"],
+button[value="-"],
+button[value="+"] {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .calculator {
+      padding: 15px;
+  }
+  
+  button {
+      padding: 15px;
+      font-size: 1.2rem;
+  }
+  
+  #inputbox {
+      height: 70px;
+      font-size: 2rem;
+  }
+}
